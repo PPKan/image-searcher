@@ -93,38 +93,36 @@ export default function ImageList(props) {
     });
   }
 
+  getGiphyImg(keyword);
+  getPixabayImg(keyword);
+  getPexelsImg(keyword);
+  getUnsplashImg(keyword);
+
   function renderFromTab() {
     switch (currentTab) {
       case "giphy":
         return (
           <ImageRender
             image={giphyImg}
-            getter={getGiphyImg}
-            keyword={keyword}
           />
         );
       case "pixabay":
         return (
           <ImageRender
             image={pixabayImg}
-            getter={getPixabayImg}
-            keyword={keyword}
           />
         );
       case "pexels":
         return (
           <ImageRender
             image={pexelsImg}
-            getter={getPexelsImg}
-            keyword={keyword}
+
           />
         );
       default:
         return (
           <ImageRender
             image={unsplashImg}
-            getter={getUnsplashImg}
-            keyword={keyword}
           />
         );
     }
@@ -132,7 +130,5 @@ export default function ImageList(props) {
 
   let display = renderFromTab();
 
-  return (
-      <>{display}</>
-  );
+  return <>{display}</>;
 }

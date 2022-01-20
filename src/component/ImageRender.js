@@ -1,13 +1,13 @@
 import React from "react";
 
 export default function ImageRender(props) {
-  const { image, getter, keyword } = props;
-
-  getter(keyword);
+  const { image } = props;
 
   return (
     <div className="img-container">
-      <img alt="" src={image} />
+      <div className="img-inner-container">
+        <img alt="" src={image} />
+      </div>
     </div>
   );
 }

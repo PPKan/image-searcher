@@ -15,7 +15,7 @@ function App() {
           <h1>Multi-source Image Searcher</h1>
           <SearchBar setKeyword={setKeyword} />
         </div>
-        <TabButtons setCurrentTab={setCurrentTab} />
+        <TabButtons setCurrentTab={setCurrentTab} currentTab={currentTab} />
         <ImageList keyword={keyword} currentTab={currentTab} />
       </div>
     </>

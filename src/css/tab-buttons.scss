@@ -1,6 +1,6 @@
 .tab-button-container {
 
-  height: 100px;
+  height: 60px;
   margin-left: 10%;
   flex-shrink: 0;
 
@@ -8,14 +8,20 @@
     height: 100%;
     text-decoration: none;
     background: hsl(208, 100%, 97%);
+    color: hsl(208, 100%, 35%);
     border: 0;
     font-size: 1.5em;
     border-radius: 1em 1em 0 0;
-    width: 150px;
+    width: 125px;
+    margin-left: 10px;
     cursor: pointer;
   }
   
-  button:active ,button:hover {
+  button:hover {
+    background: hsl(208, 100%, 80%);
+  }
+  
+  .btn-active {
     background: hsl(208, 100%, 80%);
   }
 }

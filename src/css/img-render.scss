@@ -5,14 +5,24 @@
   height: auto;
   display: grid;
   place-items: center;
-  border: 100px solid hsl(208, 100%, 80%);
-  background: aliceblue;
+  border-radius: 2em 2em 0 0;
+  // border: 100px solid hsl(208, 100%, 80%);
+  background: hsl(208, 100%, 80%);
+
+  .img-inner-container {
+    width: 90%;
+    height: 90%;
+    border-radius: 3em;
+    display: grid;
+    place-items: center;
+    background: aliceblue;
+  }
 
   img {
     border: 0;
     margin: 0;
     padding: 0;
-    max-height: 100%;
+    max-height: 50vh;
   }
   
 }
