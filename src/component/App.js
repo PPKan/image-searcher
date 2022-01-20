@@ -86,7 +86,7 @@ function App() {
       {
         headers: {
           Authorization:
-            "563492ad6f91700001000001682ad028d6ad4d019adbd0959baa9d17",
+            "563492ad6f91700001000001ed2ffdc6bfbf48a091ee9a6f0bd2f44f",
         },
         mode: "cors",
       }
