@@ -1,6 +1,6 @@
 # An Multi-source image search engine
 
-This search engine adapted **API**s from 4 sites:
+This **React-Based** search engine adapted **API**s from 4 sites:
 - [Giphy](https://developers.giphy.com/)
 - [Unsplash](https://unsplash.com/developers)
 - [Pixabay](https://pixabay.com/api/docs/)
