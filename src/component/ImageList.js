@@ -6,6 +6,8 @@ export default function ImageList(props) {
 
   const [unsplashImg, setUnsplashImg] = useState();
   const [giphyImg, setGiphyImg] = useState();
+  const [pixabayImg, setPixabayImg] = useState();
+  const [pexelsImg, setPexelsImg] = useState();
 
   async function fetchImage(url, key, searchText, headers = { mode: "cors" }) {
     let [apiKey, apiValue] = key;
@@ -56,6 +58,41 @@ export default function ImageList(props) {
     });
   }
 
+  function getPixabayImg(searchText) {
+    if (!searchText) return;
+
+    const pixabay = fetchImage(
+      "https://pixabay.com/api",
+      ["key", "25325947-3933bc14bea566dd81407b83b"],
+      ["q", searchText]
+    );
+
+    pixabay.then((response) => {
+      setPixabayImg(response.hits[0].webformatURL);
+    });
+  }
+
+  function getPexelsImg(searchText) {
+    if (!searchText) return;
+
+    const pexels = fetchImage(
+      "https://api.pexels.com/v1/search",
+      ["", ""],
+      ["query", searchText],
+      {
+        headers: {
+          Authorization:
+            "563492ad6f91700001000001682ad028d6ad4d019adbd0959baa9d17",
+        },
+        mode: "cors",
+      }
+    );
+
+    pexels.then((response) => {
+      setPexelsImg(response.photos[0].src.original);
+    });
+  }
+
   function renderFromTab() {
     switch (currentTab) {
       case "giphy":
@@ -63,6 +100,22 @@ export default function ImageList(props) {
           <ImageRender
             image={giphyImg}
             getter={getGiphyImg}
+            keyword={keyword}
+          />
+        );
+      case "pixabay":
+        return (
+          <ImageRender
+            image={pixabayImg}
+            getter={getPixabayImg}
+            keyword={keyword}
+          />
+        );
+      case "pexels":
+        return (
+          <ImageRender
+            image={pexelsImg}
+            getter={getPexelsImg}
             keyword={keyword}
           />
         );
