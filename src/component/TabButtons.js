@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 export default function TabButtons(props) {
-  const { setCurrentTab, currentTab } = props;
+  const { setCurrentTab } = props;
 
   const giphy = useRef();
   const unsplash = useRef();
