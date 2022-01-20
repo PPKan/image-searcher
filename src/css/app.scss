@@ -21,7 +21,7 @@ body {
 
 .head {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,4 +29,27 @@ body {
     gap: 1rem;
     // background-color: aqua;
     width: 100%;
+    font-size: 1.25em;
+}
+
+footer {
+    height: 25px;
+    background: hsl(208, 100%, 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        aspect-ratio: 1;
+        height: 20px;
+        width: 20px;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    }
 }

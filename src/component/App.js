@@ -3,9 +3,9 @@ import ImageList from "./ImageList";
 import SearchBar from "./SearchBar";
 import TabButtons from "./TabButtons";
 import "../css/app.scss";
+import githubIcon from "../images/GitHub-Mark.png";
 
 function App() {
-  const [keyword, setKeyword] = useState("cat");
   const [currentTab, setCurrentTab] = useState("unsplash");
 
   const [unsplashImg, setUnsplashImg] = useState();
@@ -105,7 +105,7 @@ function App() {
   }
 
   useEffect(() => {
-    getAllImg(keyword);
+    getAllImg("cat");
   }, []);
 
   return (
@@ -113,21 +113,26 @@ function App() {
       <div className="container">
         <div className="head">
           <h1>Multi-source Image Searcher</h1>
-          <SearchBar
-            setKeyword={setKeyword}
-            getAllImg={getAllImg}
-            keyword={keyword}
-          />
+          <SearchBar getAllImg={getAllImg} />
         </div>
         <TabButtons setCurrentTab={setCurrentTab} currentTab={currentTab} />
         <ImageList
-          keyword={keyword}
           currentTab={currentTab}
           unsplashImg={unsplashImg}
           giphyImg={giphyImg}
           pixabayImg={pixabayImg}
           pexelsImg={pexelsImg}
         />
+        <footer>
+          Powered by &nbsp;
+          <a
+            href="https://github.com/PPKan/image-searcher"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <img src={githubIcon} alt="github icon" /> PPKan
+          </a>
+        </footer>
       </div>
     </>
   );

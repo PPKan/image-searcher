@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageRender from "./ImageRender";
 
 export default function ImageList(props) {
-  const { keyword, currentTab, unsplashImg, giphyImg, pixabayImg, pexelsImg } = props;
+  const { currentTab, unsplashImg, giphyImg, pixabayImg, pexelsImg } = props;
 
   function renderFromTab() {
     switch (currentTab) {
