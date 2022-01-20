@@ -1,0 +1,32 @@
+@import "./reset.css";
+@import "./font.scss";
+@import "./search-bar.scss";
+@import "./tab-buttons.scss";
+@import "./image-list.scss";
+@import "./img-render.scss";
+
+body {
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    font-family: Noto Sans TC, Microsoft JhengHei, Arial;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    // background-color: aqua;
+    width: 100%;
+}

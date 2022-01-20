@@ -132,5 +132,7 @@ export default function ImageList(props) {
 
   let display = renderFromTab();
 
-  return <div class="image-container">{display}</div>;
+  return (
+      <>{display}</>
+  );
 }

@@ -5,10 +5,10 @@ export default function TabButtons(props) {
 
   return (
     <div className="tab-button-container">
-      <button name="giphy" onClick={(e) => {setCurrentTab(e.target.name)}}>Giphy</button>
-      <button name="unsplash" onClick={(e) => {setCurrentTab(e.target.name)}}>Unsplash</button>
-      <button name="pixabay" onClick={(e) => {setCurrentTab(e.target.name)}}>Pixabay</button>
-      <button name="pexels" onClick={(e) => {setCurrentTab(e.target.name)}}>Pexels</button>
+      <button className="btn" name="giphy" onClick={(e) => {setCurrentTab(e.target.name)}}>Giphy</button>
+      <button className="btn" name="unsplash" onClick={(e) => {setCurrentTab(e.target.name)}}>Unsplash</button>
+      <button className="btn" name="pixabay" onClick={(e) => {setCurrentTab(e.target.name)}}>Pixabay</button>
+      <button className="btn" name="pexels" onClick={(e) => {setCurrentTab(e.target.name)}}>Pexels</button>
     </div>
   );
 }
