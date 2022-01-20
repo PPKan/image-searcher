@@ -1,5 +1,4 @@
 .tab-button-container {
-
   height: 60px;
   margin-left: 10%;
   flex-shrink: 0;
@@ -16,12 +15,22 @@
     margin-left: 10px;
     cursor: pointer;
   }
-  
+
   button:hover {
     background: hsl(208, 100%, 80%);
   }
-  
+
   .btn-active {
     background: hsl(208, 100%, 80%);
+  }
+}
+
+@media (max-width: 600px) {
+  .tab-button-container {
+    button {
+      width: 20%;
+      font-size:0.8rem;
+      line-break: auto;
+    }
   }
 }

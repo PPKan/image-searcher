@@ -2,7 +2,6 @@
 @import "./font.scss";
 @import "./search-bar.scss";
 @import "./tab-buttons.scss";
-@import "./image-list.scss";
 @import "./img-render.scss";
 
 body {
@@ -51,5 +50,12 @@ footer {
         align-items: center;
         text-decoration: none;
         color: inherit;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .head {
+        font-size: 0.8rem;
     }
 }

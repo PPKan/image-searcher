@@ -26,3 +26,11 @@
   }
   
 }
+
+@media (max-width: 600px) {
+  .img-container {
+    img {
+      max-height: 40vh;
+    }
+  }
+}
