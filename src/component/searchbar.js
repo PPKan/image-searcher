@@ -4,12 +4,13 @@ import searchButton from '../images/search-button.png'
 export default function SearchBar(props) {
   const [value, setValue] = useState();
 
-  const { setKeyword } = props;
+  const { setKeyword, getAllImg } = props;
 
   return (
     <>
       <form
         onSubmit={(e) => {
+          getAllImg(value)
           e.preventDefault();
           setKeyword(value);
         }}
