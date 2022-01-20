@@ -1,4 +1,4 @@
-# An Multi-source image search engine
+# A Multi-source image search engine
 
 This **React-Based** search engine adapted **API**s from 4 sites:
 - [Giphy](https://developers.giphy.com/)
