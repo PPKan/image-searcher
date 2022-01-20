@@ -106,7 +106,8 @@ function App() {
 
   useEffect(() => {
     getAllImg("cat");
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
