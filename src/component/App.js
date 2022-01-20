@@ -24,7 +24,7 @@ function App() {
 
     const fetchUrl = url + "?" + apiKey + apiValue + textKey + "=" + textValue;
 
-    console.log(fetchUrl);
+    // console.log(fetchUrl);
 
     try {
       const result = await fetch(fetchUrl, headers);
